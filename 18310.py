@@ -3,7 +3,6 @@ import sys
 number = int(sys.stdin.readline())
 
 house = sys.stdin.readline().split()
-
 house = [int(i) for i in house]
 house.sort()
 
