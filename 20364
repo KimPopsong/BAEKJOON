@@ -1,0 +1,33 @@
+import sys, random
+
+landNum, duckNum = map(int, sys.stdin.readline().rsplit())
+land = [False] * (landNum + 1)
+
+for i in range(duckNum):
+    n = int(sys.stdin.readline())
+
+    temp = n
+
+    flag = 0
+    firstLand = -1
+
+    while True:
+        if temp <= 1:
+            land[n] = True
+            break
+
+        else:
+            if not land[temp]:
+                temp //= 2
+                continue
+
+            else:
+                flag = 1
+                firstLand = temp
+                temp //= 2
+
+    if not flag:
+        print(0)
+
+    else:
+        print(firstLand)
