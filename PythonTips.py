@@ -1,3 +1,4 @@
+###############################
 #Eratosthenes
 import math
 
@@ -30,6 +31,7 @@ while True:
 
 print(eratosthenes)
 
+###############################
 #Sorted List
 list1 = [[1, 2], [3, 4], [5, 6]]
 
@@ -37,6 +39,7 @@ sorted_list = sorted(list1, key=lambda x: x[0], reverse=True)
 
 print(sorted_list)
 
+###############################
 #Stdin
 import sys
 
