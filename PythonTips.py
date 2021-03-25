@@ -4,11 +4,13 @@ import math
 
 eratosthenes = []
 maximum = int(input())
-for i in range(0, maximum + 1):
-    eratosthenes.append(True)
 
+for i in range(0, maximum + 1):
     if i % 2 == 0:
-        eratosthenes[i] = False
+        eratosthenes.append(False)
+
+    else:
+        eratosthenes.append(True)
 
 eratosthenes[0] = False
 eratosthenes[1] = False
