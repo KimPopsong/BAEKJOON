@@ -58,3 +58,9 @@ data = int(input())
 
 heapq.heappush(list, data)
 n = heapq.heappop(list)
+
+###############################
+#EOF
+import sys
+
+for line in sys.stdin:
