@@ -1,22 +1,26 @@
-def LCM(n1, n2):
-    divisor = 1
+def calcGCD(n1, n2):
+    gcd = 1
 
-    if n1 > n2:
-        n1, n2 = n2, n1
+    nod = 2
+    while True:
+        if n1 < nod or n2 < nod:
+            break
 
-    for i in range(2, n1 + 1):
-        if n1 % i == 0 and n2 % i == 0:
-            divisor = i
+        if n1 % nod == 0 and n2 % nod == 0:
+            gcd *= nod
+            n1 //= nod
+            n2 //= nod
 
-    return (n1 / divisor) * n2
+        else:
+            nod += 1
 
-testcase = int(input())
-case = []
-answer = []
+    return gcd
 
-for i in range(testcase):
-    temp = list(map(int, input().split()))
-    answer.append(int(LCM(temp[0], temp[1])))
+testCase = int(input())
 
-for ans in answer:
-    print(ans)
+for i in range(testCase):
+    num1, num2 = map(int, input().split())
+
+    gcd = calcGCD(num1, num2)
+
+    print(num1 * num2 // gcd)
