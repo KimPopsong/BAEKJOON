@@ -1,25 +1,10 @@
-def IsTriangle(tri):
-    if tri[0] * tri[0] + tri[1] * tri[1] == tri[2] * tri[2]:
-        return True
-
-    else:
-        return False
-
-numbers = []
-
 while True:
-    temp = input().split()
-    temp = [int(i) for i in temp]
+    slide = sorted(list(map(int, input().split())))
 
-    if temp[0] == 0 and temp[1] == 0 and temp[2] == 0:
-        break
+    if slide[0] == slide[1] == slide[2] == 0:
+        exit()
 
-    else:
-        temp.sort()
-        numbers.append(temp)
-
-for num in numbers:
-    if IsTriangle(num):
+    if slide[2] ** 2 == slide[1] ** 2 + slide[0] ** 2:
         print('right')
 
     else:
