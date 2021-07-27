@@ -74,5 +74,10 @@ list2 = [1, 2, 3, 4, 5]
 if list2.count(list1[0][0]) == 0:
 
 if list1[0][0] not in list2:
-    
 # 아래 방법이 위 방법보다 빠름
+
+###############################
+# 문자열 리스트로 입력 받기
+import sys
+
+board = [list(sys.stdin.readline().rstrip()) for _ in range(5)]
