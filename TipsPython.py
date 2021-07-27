@@ -50,6 +50,7 @@ x, y = sys.stdin.readline().rsplit()
 l = list(map(int, sys.stdin.readline().rsplit()))
 c = int(sys.stdin.readline().rstrip())  # rstrip not rsplit
 
+###############################
 #Heap Queue
 import heapq
 
@@ -64,3 +65,14 @@ n = heapq.heappop(list)
 import sys
 
 for line in sys.stdin:
+
+###############################
+#존재 유무 확인
+list1 = [[1, 1], [2, 2], [3, 3]]
+list2 = [1, 2, 3, 4, 5]
+
+if list2.count(list1[0][0]) == 0:
+
+if list1[0][0] not in list2:
+    
+# 아래 방법이 위 방법보다 빠름
