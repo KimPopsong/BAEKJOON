@@ -108,7 +108,7 @@ while True:
         nod1 += 1
         nod2 += 1
 
-        if gcd > 1000000000:
+        if gcd >= 1000000000:
             gcd %= 1000000000
             flag = True
 
