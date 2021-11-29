@@ -14,3 +14,15 @@ int main()
 }
 
 ///////////////////////////////
+// Preventing exponential notation
+#include <iostream>
+
+int main()
+{
+  std::cout << std::fixed;
+	std::cout.precision(0);
+  
+  return 0;
+}
+
+///////////////////////////////
