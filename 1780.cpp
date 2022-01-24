@@ -1,15 +1,17 @@
 #include <iostream>
 
-int paper[2200][2200];
-int minusPaper, zeroPaper, plusPaper;
+#define DATATYPE int
 
-bool isSameNumber(int startI, int startJ, int size)
+DATATYPE paper[2200][2200];
+DATATYPE minusPaper, zeroPaper, plusPaper;
+
+bool isSameNumber(DATATYPE startI, DATATYPE startJ, DATATYPE size)
 {
-	int number = paper[startI][startJ];
+	DATATYPE number = paper[startI][startJ];
 
-	for (int i = startI; i < startI + size; i++)
+	for (DATATYPE i = startI; i < startI + size; i++)
 	{
-		for (int j = startJ; j < startJ + size; j++)
+		for (DATATYPE j = startJ; j < startJ + size; j++)
 		{
 			if (paper[i][j] != number)
 			{
@@ -36,7 +38,7 @@ bool isSameNumber(int startI, int startJ, int size)
 	return true;
 }
 
-void Check(int startI, int startJ, int size)
+void Check(DATATYPE startI, DATATYPE startJ, DATATYPE size)
 {
 	if (isSameNumber(startI, startJ, size))
 	{
@@ -45,9 +47,9 @@ void Check(int startI, int startJ, int size)
 
 	else
 	{
-		for (int i = startI; i < startI + size; i += size / 3)
+		for (DATATYPE i = startI; i < startI + size; i += size / 3)
 		{
-			for (int j = startJ; j < startJ + size; j += size / 3)
+			for (DATATYPE j = startJ; j < startJ + size; j += size / 3)
 			{
 				Check(i, j, size / 3);
 			}
@@ -55,19 +57,19 @@ void Check(int startI, int startJ, int size)
 	}
 }
 
-int main()
+DATATYPE main()
 {
 	std::ios_base::sync_with_stdio(false);
 	std::cin.tie(NULL);
 	std::cout.tie(NULL);
 
-	int size;
+	DATATYPE size;
 
 	std::cin >> size;
 
-	for (int i = 0; i < size; i++)
+	for (DATATYPE i = 0; i < size; i++)
 	{
-		for (int j = 0; j < size; j++)
+		for (DATATYPE j = 0; j < size; j++)
 		{
 			std::cin >> paper[i][j];
 		}
