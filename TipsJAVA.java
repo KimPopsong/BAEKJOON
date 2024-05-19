@@ -1,3 +1,4 @@
+//////////////////////////////////////////////////
 1. List에 대한 sort
 
 class Point{
@@ -27,3 +28,14 @@ points.sort(new Comparator<Point>() {
             }
         });
 왼쪽 값이 크다면 1, 같다면 0, 작다면 -1 반환
+//////////////////////////////////////////////////
+2. 빠른 입출력
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringBuilder sb = new StringBuilder();
+
+String[] temp = br.readLine().split(" ");  // 한 줄 입력 후 int로 변환 필요
+sb.append("입력하고 싶은 값을").append("append를 이용하여 계속 입력").append("\n");
+
+System.out.println(sb);  // 마지막에 한꺼번에 출력
+//////////////////////////////////////////////////
