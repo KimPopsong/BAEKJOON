@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Main {
     static int number, minSum;
-    static int[] numbers = new int[100001];
+    static int[] numbers = new int[100010];
 
     public static void main(String[] args) throws IOException
     {
