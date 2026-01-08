@@ -2,11 +2,10 @@
 
 int main()
 {
-	int A, B;
-	
-	scanf("%d %d", &A, &B);
+    int a, b;
 
-	printf("%d\n", A + B);
+    scanf("%d %d", &a, &b);
+    printf("%d\n", a + b);
 
-	return 0;
+    return 0;
 }
