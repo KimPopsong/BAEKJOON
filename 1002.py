@@ -31,7 +31,6 @@ case = []
 for i in range(testcase):
     temp = input().split()
     temp = [int(i) for i in temp]
-
     case.append(temp)
 
 for n in case:
